@@ -60,7 +60,7 @@ try:
     raw_labels=labels_file.read()
     labels_file.close()
 except FileNotFoundError:
-    print("error: MNIST %sing image/label set is missing missing" % sys.argv[1])
+    print("error: MNIST %sing image/label set is missing" % sys.argv[1])
     exit(-1)
 type_no,ndims,images,rows,cols=struct.unpack_from(images_fmt,raw_images,0)
 # Make sure we are reading a valid MNIST IDX file
