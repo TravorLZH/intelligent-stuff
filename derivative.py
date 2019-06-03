@@ -25,9 +25,11 @@ def f_prime(x):
 def tangent_line(x):
     return f_prime(a)*(x-a)+f(a)
 
-plt.plot(x,f(x),"r-",linewidth=1,label="f(x)")
+plt.figure(title="Tangent line of a function",num=1)
+
+plt.plot(x,f(x),"r-",linewidth=1,label="$f(x)=\\sin{(x)}(-x^2+2)$")
 plt.plot(x2,tangent_line(x2),"b-",linewidth=1.2,
-        label="tangent line of f(x) at x=%d" % a)
+        label="tangent line of $f(x)$ at x=%d" % a)
 
 plt.legend()
 plt.show()

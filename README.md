@@ -24,3 +24,9 @@ derivative by using tangent line. This is a fundamental concept for my currently
 incomplete **Gradient Descent** algorithm.
 
 ![Derivative plot](derivative_plot.png)
+
+* mnist\_test.py: This is the simplest fully-connected network implemented to
+classify the MNIST handwriting digits. Due to my limitation of mathematics, the
+program is written using Keras API.
+
+![MNIST classifier](mnist_test_screenshot.png)
