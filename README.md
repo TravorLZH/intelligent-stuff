@@ -1,6 +1,8 @@
 # MNIST Classifier
 
-My "Hello world" project of Neural Networks
+My "Hello world" project of Neural Networks. It is currently based on the Keras
+API, but I am going implement one **literally from scratch** after I mastered
+the section of back propagation
 
 ## Prerequisites
 
