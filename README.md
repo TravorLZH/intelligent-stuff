@@ -20,10 +20,21 @@ mathematics, the program is written using Keras API.
 
 ## Programs that are implemented from scratch
 
-* **[gd\_linearfunc.py](gd_linearfunc.py)**: This script demonstrates the use of
-**Gradient Descent** in _Machine Learning_ by fitting a linear function. Though 
+* **[gd\_linearfunc.py](gd_linearfunc.py)**: This script demonstrates **Gradient
+Descent** in _Machine Learning_ by fitting a linear function. Though 
 it does some apparently useless jobs, it is probably the simplest learning that
 makes use of **Gradient Descent**.
+
+> Install **[MathJax Plugin for Github][1]** to view the formulas
+
+This is the form of the linear function to fit:
+
+$$\displaystyle{f(x)=kx+b}$$
+
+And the formula below is how we do gradient descent to the parameters (knowledge
+of multivariable calculus may be required to understand this):
+
+$$\displaystyle{\begin{bmatrix}k \\\\ b\end{bmatrix}=\begin{bmatrix}k_0 \\\\ b_0\end{bmatrix}-\alpha \begin{bmatrix}\frac{\partial C}{\partial k} \\\\ \frac{\partial C}{\partial b}\end{bmatrix}}$$
 
 * [mnist\_interpreter.py](mnist_interpreter.py): This is a script that helps you
 view the labeled images from either of the training or testing data sets. It
@@ -37,3 +48,5 @@ function and its derivative by using tangent line. This is a fundamental concept
 for **Gradient Descent** algorithm.
 
 ![Derivative plot](derivative_plot.png)
+
+[1]: https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima?hl=en-US
