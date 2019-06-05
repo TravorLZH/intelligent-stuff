@@ -2,7 +2,7 @@
 
 My "Hello world" project of Neural Networks. It is currently based on the Keras
 API, but I am going implement one **literally from scratch** after I mastered
-the section of back propagation
+the section of back propagation.
 
 ## Prerequisites
 
@@ -12,23 +12,28 @@ installed.
 To run `derivative.py`, you also need `matplotlib` since it is using `pyplot`
 to graph functions.
 
-## Currently Implemented
+* [mnist\_test.py](mnist_test.py): This is the simplest fully-connected network
+ implemented to classify the MNIST handwriting digits. Due to my limitation of
+mathematics, the program is written using Keras API.
 
-* mnist\_interpreter.py: This is a script that helps you view the labeled images
-from either of the training or testing data sets. It is well-documented, so
-developers are easy to understand the format of IDX file and can implement new
-interpreters by themselves.
+![MNIST classifier](mnist_test_screenshot.png)
+
+## Programs that are implemented from scratch
+
+* **[gd\_linearfunc.py](gd_linearfunc.py)**: This script demonstrates the use of
+**Gradient Descent** in _Machine Learning_ by fitting a linear function. Though 
+it does some apparently useless jobs, it is probably the simplest learning that
+makes use of **Gradient Descent**.
+
+* [mnist\_interpreter.py](mnist_interpreter.py): This is a script that helps you
+view the labeled images from either of the training or testing data sets. It
+is well-documented, so developers are easy to understand the format of IDX
+file and can implement new interpreters by themselves.
 
 ![MNIST interpreter](interpreter.png)
 
-* derivative.py: This script shows the relationship between a function and its
-derivative by using tangent line. This is a fundamental concept for my currently
-incomplete **Gradient Descent** algorithm.
+* [derivative.py](derivative.py): This script shows the relationship between a
+function and its derivative by using tangent line. This is a fundamental concept
+for **Gradient Descent** algorithm.
 
 ![Derivative plot](derivative_plot.png)
-
-* mnist\_test.py: This is the simplest fully-connected network implemented to
-classify the MNIST handwriting digits. Due to my limitation of mathematics, the
-program is written using Keras API.
-
-![MNIST classifier](mnist_test_screenshot.png)
