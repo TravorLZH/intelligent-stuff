@@ -20,6 +20,7 @@ In this program, we are going to use gradient descent to fit a linear function
 (y=kx+b where k!=0).
 """
 import numpy as np
+from matplotlib import pyplot as plt
 import os
 import sys
 
@@ -70,6 +71,8 @@ if os.path.exists("./logs/")==False:
 
 print("Before learning: k=%f, b=%f" % (k,b))
 
+costs=[]
+
 for epoch_no in range(epochs):
     n=0
     log_file=open("logs/epoch_"+str(epoch_no+1)+".log","w")
@@ -97,14 +100,22 @@ for epoch_no in range(epochs):
                 gk=0.0
                 gb=0.0
         log_file.close()
-        print("Epoch #%d completes, k=%f, b=%f, cost=%f" %
-                (epoch_no+1,k,b,total_cost/n))
+        avg_cost=total_cost/n
+        costs.append(avg_cost)
+        #print("Epoch #%d completes, k=%f, b=%f, cost=%f" %
+        #        (epoch_no+1,k,b,avg_cost))
     except KeyboardInterrupt:
-        print("Epoch #%d interrupted cost=%f, now jump to test"
+        print("Epoch #%d interrupted cost=%f, terminate training"
                 % (epoch_no+1,total_cost/n))
         break
 
 print("Learned k=%f, b=%f" % (k,b))
+
+plt.plot(range(1,len(costs)+1),costs)
+plt.xlabel("Epoch")
+plt.ylabel("Cost")
+plt.show()
+
 # Start testing...
 y_predict=f_learn(x_test)
 total_cost=0.0
