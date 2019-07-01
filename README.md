@@ -13,16 +13,20 @@ To run `derivative.py`, you also need `matplotlib` since it is using `pyplot`
 to graph functions.
 
 * [mnist\_test.py](mnist_test.py): This is the simplest fully-connected network
- implemented to classify the MNIST handwriting digits. Due to my limitation of
+ implemented to classify the MNIST handwriting digits. Due to my limitation in
 mathematics, the program is written using Keras API.
 
 ![MNIST classifier](mnist_test_screenshot.png)
 
 ## Programs that are implemented from scratch
 
+* **[fnn\_xor.py](fnn_xor.py)**: It seems to be redundant to let a feedforward
+neural network learn to do _XOR_ operation, but it is my first neural network
+made from scratch.
+
 * **[gd\_linearfunc.py](gd_linearfunc.py)**: This script demonstrates **Gradient
-Descent** in _Machine Learning_ by fitting a linear function. Though 
-it does some apparently useless jobs, it is probably the simplest learning that
+Descent** in _Machine Learning_ by fitting a linear function. Though it does
+some apparently useless jobs, it is probably the simplest learning that
 makes use of **Gradient Descent**.
 
 > Install **[MathJax Plugin for Github][1]** to view the formulas
@@ -35,6 +39,9 @@ And the formula below is how we do gradient descent to the parameters (knowledge
 of multivariable calculus may be required to understand this):
 
 $$\displaystyle{\begin{bmatrix}k \\\\ b\end{bmatrix}=\begin{bmatrix}k_0 \\\\ b_0\end{bmatrix}-\alpha \begin{bmatrix}\frac{\partial C}{\partial k} \\\\ \frac{\partial C}{\partial b}\end{bmatrix}}$$
+
+> I recently discovered that the program above can also help solve the problem
+> of **Linear Regression**, I will make a separate program later
 
 * [mnist\_interpreter.py](mnist_interpreter.py): This is a script that helps you
 view the labeled images from either of the training or testing data sets. It
