@@ -47,10 +47,10 @@ def gradient_descent(dc_dk,dc_db,step=0.0001):
 
 # The training set
 x_train=np.linspace(0,100,101000)
-y_train=f(x_train)
+y_train=f(x_train)+np.random.random()-0.5
 
 # The testing set
-x_test=np.linspace(-100,0,101000)
+x_test=np.linspace(-20,20,100)
 y_test=f(x_test)
 
 epochs=100  # Number of iterations
@@ -111,9 +111,15 @@ for epoch_no in range(epochs):
 
 print("Learned k=%f, b=%f" % (k,b))
 
+plt.subplot(121)
 plt.plot(range(1,len(costs)+1),costs)
 plt.xlabel("Epoch")
 plt.ylabel("Cost")
+plt.subplot(122)
+plt.plot(x_test,f_learn(x_test),"g-", \
+    label="Linear Regression: $y_{learn}=%fx+%f" % (k,b))
+plt.plot(x_test,f(y_test),label="To be learnt: $y=3x+2$")
+plt.legend()
 plt.show()
 
 # Start testing...
